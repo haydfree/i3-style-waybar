@@ -39,7 +39,7 @@
     },
     "cpu": {
         "interval": 1,
-        "format": "cpu: {usage}",
+        "format": "cpu: {usage}%",
     },
     "temperature": {
         "interval": 1,
@@ -48,7 +48,7 @@
     },
     "load": {
         "interval": 1,
-        "format": " {load15}",
+        "format": " {load15}x",
     },
     "disk": {
         "interval": 1,
