@@ -1,0 +1,82 @@
+{
+    "position": "bottom",
+    "layer": "top",
+    "height": 24,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ], 
+    "modules-center": [],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "memory",
+        "cpu",
+        "temperature",
+        "load",
+        "disk",
+        "battery",
+        "clock"
+    ],
+
+    "pulseaudio": {
+        "interval": 1,
+        "format-muted": "vol: -{volume}%",
+        "format": "vol: +{volume}%",
+        "tooltip-format": "volume: {volume}\nformat_source: {format_source}\ndesc: {desc}"
+    },
+    "network": {
+        "interval": 1,
+        "format-wifi": "net: +{ifname} {essid} {signalStrength}%",
+        "format-ethernet": "net: +{ifname}",
+        "format": "net: ?{ifname}",
+        "tooltip-format": "interface: {ifname}\nip: {ipaddr}\ngateway: {gwaddr}\nnetmask: {netmask}\nnetmask6: {netmask6}\ncidr: {cidr}\ncidr6: {cidr6}\nessid: {essid}\nsignal: {signalStrength}% ({signaldBm} dBm)\nfrequency: {frequency} GHz\n\nup: {bandwidthUpBits} bps / {bandwidthUpBytes} Bps / {bandwidthUpOctets} ops\ndown: {bandwidthDownBits} bps / {bandwidthDownBytes} Bps / {bandwidthDownOctets} ops\ntotal: {bandwidthTotalBits} bps / {bandwidthTotalBytes} Bps / {bandwidthTotalOctets} ops\n"
+    },
+    "memory": {
+        "interval": 1,
+        "format": "mem: {used}GiB / {total}GiB",
+        "tooltip-format": "Memory:\n  Used: {used} GiB / {total} GiB ({percentage}%)\n  Available: {avail} GiB\n\nSwap:\n  Used: {swapUsed} GiB / {swapTotal} GiB ({swapPercentage}%)\n  Available: {swapAvail} GiB"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "cpu: {usage}",
+    },
+    "temperature": {
+        "interval": 1,
+        "format": " {temperatureC}°C",
+        "tooltip-format": "Temperature:\n  {temperatureC} °C\n  {temperatureF} °F\n  {temperatureK} K"
+    },
+    "load": {
+        "interval": 1,
+        "format": " {load15}",
+    },
+    "disk": {
+        "interval": 1,
+        "format": "disk: {used} / {total}",
+        "tooltip-format": "Disk Usage:\n  Total: {total}\n  Used: {used} ({percentage_used}%)\n  Free: {free} ({percentage_free}%)\n\nExact (Bytes):\n  Total: {specific_total}\n  Used: {specific_used}\n  Free: {specific_free}"
+    },
+    "battery": {
+        "interval": 1,
+        "format-charging": "bat: +{capacity}%",
+        "format-full": "bat: +{capacity}%",
+        "format-discharging": "bat: -{capacity}%",
+        "format": "bat: ?{capacity}%",
+        "tooltip-format": "capacity: {capacity}\npower: {power}\ntime: {time}\ncycles: {cycles}"
+    },
+    "clock": {
+        "interval": 1,
+        "format": "time: {:%a %Y-%m-%d %H:%M:%S}",
+        "tooltip-format": "{calendar}",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 6,
+			"format": {
+				"months": "<span alpha='100%'><b>{}</b></span>",
+				"days": "<span alpha='90%'>{}</span>",
+				"weekdays": "<span alpha='80%'><i>{}</i></span>",
+				"today": "<span alpha='100%'><b><u>{}</u></b></span>"
+			}
+		}
+    }
+}
+
