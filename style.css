@@ -19,7 +19,7 @@
 #disk,
 #battery,
 #clock {
-    border-left: 2px solid #f3f3f3;
+    border-left: 1px solid #f3f3f3;
     padding: 0 10px;
 }
 
